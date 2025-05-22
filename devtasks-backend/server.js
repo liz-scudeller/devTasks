@@ -12,7 +12,8 @@ app.use(express.json());
 
 app.use('/tasks', taskRoutes);
 
-mongoose.connect('mongodb://localhost:27017/devtasks')
+// mongoose.connect('mongodb://localhost:27017/devtasks')
+mongoose.connect(process.env.MONGODB_URI)
 .then(() => {
     console.log('MongoDB connected');
     app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

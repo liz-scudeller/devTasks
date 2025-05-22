@@ -14,7 +14,7 @@ function App() {
 
 
   useEffect(() => {
-    fetch('http://localhost:3001/tasks')
+    fetch('https://devtasks-backend-rytz.onrender.com/tasks')
     .then(res => res.json())
     .then(data => setTasks(data));
   }, []);
@@ -22,7 +22,7 @@ function App() {
   const handleAddTask = () => {
     if(!newTitle.trim()) return;
   
-    fetch('http://localhost:3001/tasks', {
+    fetch('https://devtasks-backend-rytz.onrender.com/tasks', {
       method: 'POST',
       headers: {'Content-Type' : 'application/json'},
       body: JSON.stringify({title: newTitle})
@@ -35,7 +35,7 @@ function App() {
   };
 
   const handleDelete = (id) => {
-fetch(`http://localhost:3001/tasks/${id}`, {
+fetch(`https://devtasks-backend-rytz.onrender.com/tasks/${id}`, {
   method: 'DELETE'
 }).then(() => {
   setTasks(prev => prev.filter(task => task._id !==id));
@@ -43,7 +43,7 @@ fetch(`http://localhost:3001/tasks/${id}`, {
   };
 
   const handleToggleCompleted = (id, currentStatus) => {
-    fetch(`http://localhost:3001/tasks/${id}`, {
+    fetch(`https://devtasks-backend-rytz.onrender.com/tasks/${id}`, {
       method: 'PUT',
       headers: {'Content-Type':'application/json'},
       body: JSON.stringify({completed: !currentStatus})
@@ -56,7 +56,7 @@ fetch(`http://localhost:3001/tasks/${id}`, {
   };
 
     const saveEdit = (id, editedTitle) => {
-    fetch(`http://localhost:3001/tasks/${id}`, {
+    fetch(`https://devtasks-backend-rytz.onrender.com/tasks/${id}`, {
       method: 'PUT',
       headers: {'Content-Type':'application/json'},
       body: JSON.stringify({title: editedTitle})
