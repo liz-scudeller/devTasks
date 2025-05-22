@@ -1,0 +1,150 @@
+/* Reset básico */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+/* Container principal */
+.app-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Título */
+.app-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #4a4a4a;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border: 1px solid;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Estilos por estado */
+.filter-all {
+  background-color: white;
+  color: #4a90e2;
+  border-color: #4a90e2;
+}
+
+.filter-pending {
+  background-color: white;
+  color: #e6b800;
+  border-color: #e6b800;
+}
+
+.filter-completed {
+  background-color: white;
+  color: #3cb371;
+  border-color: #3cb371;
+}
+
+/* Quando ativo */
+.filter-active-all {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.filter-active-pending {
+  background-color: #e6b800;
+  color: white;
+}
+
+.filter-active-completed {
+  background-color: #3cb371;
+  color: white;
+}
+
+/* Input + Botão */
+.form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.form input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form button {
+  padding: 8px 16px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: #357ab8;
+}
+
+/* Lista de tarefas */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  background: white;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.task-left span.done {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.task-buttons button {
+  color: #d9534f; /* vermelho padrão */
+  transition: color 0.2s ease;
+}
+
+.task-buttons button:hover {
+  color: #b52b27; /* vermelho mais escuro */
+}
+
+.edit-button {
+  color: #337ab7;
+  transition: color 0.2s ease;
+}
+
+.edit-button:hover {
+  color: #23527c;
+}
