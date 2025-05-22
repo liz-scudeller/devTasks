@@ -2,7 +2,7 @@
 
 A fullstack task manager app — fast, clean, and fully online.
 
-![screenshot](https://via.placeholder.com/800x400.png?text=DevTasks+App+Preview)
+![screenshot](https://github.com/liz-scudeller/devTasks/blob/main/screenshot.PNG)
 
 ## 🔗 Live Demo
 
